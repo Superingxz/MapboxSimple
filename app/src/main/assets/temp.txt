@@ -1,0 +1,27 @@
+/**
+     * by moos on 2017/11/13
+     * func:定制化marker的图标
+     *
+     * @return
+     */
+    public void customizeMarkerIcon(Context context, String url, OnMarkerIconLoadListener listener) {
+        final View markerView = LayoutInflater.from(context).inflate(R.layout.layout_marker_bg, null);
+        final CircleImageView icon = markerView.findViewById(R.id.marker_item_icon);
+
+        Glide.with(context)
+                .asBitmap()
+                .load(checkUrl(url))
+                .apply(RequestOptions.placeholderOf(R.drawable.shape_radius_grayf5f5f5_5dp)
+                        .error(R.drawable.shape_radius_grayf5f5f5_5dp)
+                        .dontAnimate()
+                        .diskCacheStrategy(DiskCacheStrategy.ALL))
+                .into(new SimpleTarget<Bitmap>() {
+                    @Override
+                    public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                        //待图片加载完毕后再设置bitmapDes
+                        icon.setImageBitmap(resource);
+                        bitmapDescriptor = BitmapDescriptorFactory.fromBitmap(convertViewToBitmap(markerView));
+                        listener.markerIconLoadingFinished(markerView);
+                    }
+                });
+    }

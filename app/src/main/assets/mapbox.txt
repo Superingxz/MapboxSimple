@@ -1,0 +1,78 @@
+private void initCircleLayerIcons(@NonNull Style loadedMapStyle) {
+        loadedMapStyle.addImage(
+                "cross-icon-id",
+                BitmapUtils.getBitmapFromDrawable(getResources().getDrawable(R.drawable.camp_marker1)),
+                true
+        );
+    }
+
+    private void addCircleClusteredGeoJsonSource(@NonNull Style loadedMapStyle) {
+
+        // Add a new source from the GeoJSON data and set the 'cluster' option to true.
+        try {
+            loadedMapStyle.addSource(
+                    // Point to GeoJSON data. This example visualizes all M1.0+ earthquakes from
+                    // 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
+                    new GeoJsonSource("earthquakes",
+                            new URL("https://www.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson"),
+                            new GeoJsonOptions()
+                                    .withCluster(true)
+                                    .withClusterMaxZoom(14)
+                                    .withClusterRadius(50)
+                    )
+            );
+        } catch (MalformedURLException malformedUrlException) {
+            Timber.e("Check the URL %s", malformedUrlException.getMessage());
+        }
+
+
+        // Use the earthquakes GeoJSON source to create three layers: One layer for each cluster category.
+        // Each point range gets a different fill color.
+        int[][] layers = new int[][] {
+                new int[] {150, ContextCompat.getColor(mContext, R.color.mapbox_blue)},
+                new int[] {20, ContextCompat.getColor(mContext, R.color.mapbox_blue)},
+                new int[] {0, ContextCompat.getColor(mContext, R.color.mapbox_blue)}
+        };
+
+        //Creating a marker layer for single data points
+        SymbolLayer unclustered = new SymbolLayer("unclustered-points", "earthquakes");
+
+        unclustered.setProperties(
+                iconImage("cross-icon-id")
+        );
+        loadedMapStyle.addLayer(unclustered);
+
+        for (int i = 0; i < layers.length; i++) {
+            //Add clusters' circles
+            CircleLayer circles = new CircleLayer("cluster-" + i, "earthquakes");
+            circles.setProperties(
+                    circleColor(layers[i][1]),
+                    circleRadius(18f)
+            );
+
+            Expression pointCount = toNumber(get("point_count"));
+
+            // Add a filter to the cluster layer that hides the circles based on "point_count"
+            circles.setFilter(
+                    i == 0
+                            ? all(has("point_count"),
+                            gte(pointCount, literal(layers[i][0]))
+                    ) : all(has("point_count"),
+                            gte(pointCount, literal(layers[i][0])),
+                            lt(pointCount, literal(layers[i - 1][0]))
+                    )
+            );
+            loadedMapStyle.addLayer(circles);
+        }
+
+        //Add the count labels
+        SymbolLayer count = new SymbolLayer("count", "earthquakes");
+        count.setProperties(
+                textField(Expression.toString(get("point_count"))),
+                textSize(12f),
+                textColor(Color.WHITE),
+                textIgnorePlacement(true),
+                textAllowOverlap(true)
+        );
+        loadedMapStyle.addLayer(count);
+    }

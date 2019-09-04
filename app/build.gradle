@@ -1,0 +1,235 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+def config = rootProject.ext.ver
+def library = rootProject.ext.library
+
+android {
+    compileSdkVersion config.compileSdkVersion
+    defaultConfig {
+        applicationId "com.ruanjie.camp"
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+
+        ndk {
+            //设置支持的so框架库
+            abiFilters "armeabi", "armeabi-v7a", "x86"
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "d5082712829dc2096d198d18", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+        //ARouter 模块名 必须写
+//        javaCompileOptions {
+//            annotationProcessorOptions {
+//                arguments = [moduleName: project.getName()]
+//            }
+//        }
+
+        multiDexEnabled true
+
+        dexOptions {
+            preDexLibraries = false
+            javaMaxHeapSize "5g" //4g
+        }
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        signingConfigs {
+            release {
+                storeFile file(rootProject.ext.keystorePath)
+                storePassword rootProject.ext.keystorePassword
+                keyAlias rootProject.ext.alias
+                keyPassword rootProject.ext.aliasPassword
+            }
+            debug {
+                storeFile file(rootProject.ext.keystorePath)
+                storePassword rootProject.ext.keystorePassword
+                keyAlias rootProject.ext.alias
+                keyPassword rootProject.ext.aliasPassword
+            }
+        }
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
+        }
+        buildTypes {
+            debug {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                signingConfig signingConfigs.release
+            }
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                signingConfig signingConfigs.release
+                // 多渠道打包
+                applicationVariants.all { variant ->
+                    variant.outputs.all {
+                        // 输出apk名称为great_v1.0_wandoujia.apk
+                        def fileName = "camp_v${defaultConfig.versionName}.apk"
+                        outputFileName = fileName
+
+                    }
+                }
+            }
+        }
+
+        packagingOptions {
+            doNotStrip '*/mips/*.so'
+            doNotStrip '*/mips64/*.so'
+        }
+
+        compileOptions {
+            targetCompatibility 1.8
+            sourceCompatibility 1.8
+        }
+
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+        }
+        sourceSets {
+            main {
+                jniLibs.srcDirs = ['libs']
+                assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+                res.srcDirs = ['src/main/res', 'src/main/res/drawable-xhdpi', 'src/main/res/drawable-xxhdpi', 'src/main/res/color']
+            }
+        }
+
+        greendao {
+            schemaVersion 3//数据库版本号
+            daoPackage 'com.ruanjie.camp.greendao'//设置DaoMaster、DaoSession、Dao包名
+            targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录
+            //targetGenDirTest：设置生成单元测试目录
+            //generateTests：设置自动生成单元测试用例
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+            res.srcDirs = ['src/main/res', 'src/main/res/drawable-xhdpi', 'src/main/res/drawable-xxhdpi', 'src/main/res/color']
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support.constraint:constraint-layout:2.0.0-alpha1'
+    testImplementation 'junit:junit:4.12'
+    implementation project(':baselibrary')
+    debugImplementation project(':baselibrary')
+    //    implementation project(':rxglleryfinal')
+    //    debugImplementation project(':rxglleryfinal')
+    //    annotationProcessor library.arouterCompiler
+    annotationProcessor library.butterknife_compiler
+    //    annotationProcessor library.glide_compiler
+    implementation library.multidex
+    implementation library.okio
+    implementation library.okhttp
+    implementation library.okhttp_logging
+    implementation library.gson
+    implementation library.retrofit2
+    implementation library.retrofit2_gson
+    implementation library.retrofit2_adapter
+    implementation library.TabLayout
+    implementation library.FlycoRoundView
+    implementation library.barlibrary
+    implementation library.banner
+    implementation library.circleimageview
+    implementation library.androideventbus
+    //    implementation library.rxgalleryfinal
+    implementation library.greendao
+    debugImplementation 'net.zetetic:android-database-sqlcipher:3.5.2'
+    implementation library.PickerView
+    implementation library.parse_android
+
+    implementation library.amap_map2d
+    implementation library.amap_navi_3dmap
+    implementation library.amap_search
+    implementation library.amap_location
+
+    implementation 'com.github.lygttpod:SuperTextView:2.1.7'
+    implementation 'com.github.ihsg:PatternLocker:2.1.0'
+    implementation 'cn.jiguang.sdk:jpush:3.1.6'
+    // 此处以JPush 3.1.6 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:1.2.5'
+    // 此处以JCore 1.2.5 版本为例。
+    implementation 'com.allenliu.versionchecklib:library:2.0.8'
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.2'
+    implementation 'com.github.xiaohaibin:XMarqueeView:2.0.2'
+    implementation 'com.sunfusheng:marqueeview:1.3.3'
+    //将latestVersion替换成上面 jitpack 后面的版本号
+    implementation 'com.xw.repo:bubbleseekbar:3.10'
+    implementation 'com.github.warkiz.widget:indicatorseekbar:2.1.2'
+    implementation files('libs/tbs_sdk_thirdapp_v3.6.0.1310_43612_sharewithdownload_withoutGame_obfs_20180706_163319.jar')
+    implementation('com.github.gzu-liyujiang.AndroidPicker:WheelPicker:1.5.6') {
+        exclude group: 'com.android.support'
+    }
+    implementation 'me.yokeyword:indexablerecyclerview:1.2.3'
+    implementation 'me.majiajie:pager-bottom-tab-strip:2.3.0'
+    implementation 'jp.wasabeef:glide-transformations:4.0.1'
+    implementation 'com.google.android:flexbox:1.0.0'
+    //对PopupWindow常用API的简单封装，几行代码就搞定PopupWindow弹窗，使用Builder模式，链式调用，像使用AlertDialog 一样
+    implementation 'com.example.zhouwei.library:library:1.0.0'
+    implementation 'com.haibin:calendarview:3.4.2'
+    //友盟
+    implementation 'com.umeng.analytics:analytics:latest.integration'
+    implementation 'com.umeng.sdk:common:latest.integration'
+    implementation files('libs/umeng-share-core-6.9.3.jar')
+    implementation files('libs/umeng-share-QQ-simplify-6.9.3.jar')
+    implementation files('libs/umeng-share-wechat-simplify-6.9.3.jar')
+    implementation files('libs/umeng-shareboard-widget-6.9.3.jar')
+    implementation files('libs/umeng-sharetool-6.9.3.jar')
+//    implementation files('libs/commons-logging-1.1.1.jar')
+//    implementation files('libs/commons-logging-1.1.1-sources.jar')
+    implementation files('libs/zmxy-sdk-java-20181115204345.jar')
+    implementation files('libs/zmxy-sdk-java-20181115204345-source.jar')
+    implementation(name: 'alipaySdk-15.5.9-20181123210601', ext: 'aar')
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    implementation 'me.zhanghai.android.materialratingbar:library:1.3.1'
+    implementation 'cn.bertsir.zbarLibary:zbarlibary:1.1.4'
+    implementation 'com.alibaba:fastjson:1.1.55.android'
+    implementation 'com.ycjiang:ImagePreview:2.2.3'
+//    implementation 'com.github.Jay-Goo:RangeSeekBar:v2.0.4'
+    implementation library.swipelayout
+    implementation 'com.pgyersdk:sdk:2.8.1'
+
+    implementation 'com.google.android.gms:play-services-places:12.0.1'
+    implementation 'com.google.android.gms:play-services-maps:12.0.1'
+    //    地图操作工具类，添加标记等
+    implementation 'com.google.maps.android:android-maps-utils:0.5+'
+    //mapbox
+    implementation library.mapboxMapSdk
+    implementation library.mapboxAnnotationPlugin
+    implementation library.mapboxChinaPlugin
+    implementation library.mapboxPluginBuilding
+    implementation library.mapboxPluginPlaces
+    implementation library.mapboxPluginLocalization
+    implementation library.mapboxPluginTraffic
+    implementation library.mapboxPluginMarkerView
+    implementation library.mapboxPluginAnnotation
+    implementation library.mapboxPluginScalebar
+    implementation project(':libandroid-navigation')
+    implementation 'com.koushikdutta.async:androidasync:2.+'
+    implementation 'com.nanohttpd:nanohttpd:2.1.0'
+}

@@ -1,0 +1,560 @@
+<resources>
+
+    <style name="AppTheme" parent="BaseAppTheme"/>
+    <!-- Base application theme. -->
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/common_black</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/white</item>
+        //沉浸状态栏
+        <!-- <item name="android:windowIsTranslucent">true</item>
+         <item name="android:windowTranslucentStatus">true</item>-->
+
+        //ActionBarDrawerToggle设置颜色
+        <item name="colorControlNormal">@android:color/white</item>
+    </style>
+
+    <style name="line_vertical_gray">
+        <item name="android:background">@color/grayLine</item>
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="line_horizontal_gray">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/grayLine</item>
+    </style>
+
+    <style name="line_horizontal_gray5">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">5dp</item>
+        <item name="android:background">@color/grayLine</item>
+    </style>
+
+    <style name="line_vertical_white">
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="line_vertical_gray10">
+        <item name="android:background">@color/grayLine</item>
+        <item name="android:layout_width">10dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="line_horizontal_gray10">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:background">@color/grayLine</item>
+    </style>
+
+    <style name="line_horizontal_gray50">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@color/grayLine</item>
+    </style>
+
+    <style name="line_vertical_gray10_1">
+        <item name="android:background">@color/grayLine</item>
+        <item name="android:layout_width">10dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="line_horizontal_gray10_1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:background">@color/grayLine</item>
+    </style>
+
+    <style name="line_vertical_gray15">
+        <item name="android:background">@color/grayLine</item>
+        <item name="android:layout_width">15dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="line_horizontal_gray15">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">15dp</item>
+        <item name="android:background">@color/grayLine</item>
+    </style>
+
+    <style name="WhiteText20">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_20</item>
+    </style>
+
+    <style name="WhiteText19">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_19</item>
+    </style>
+
+    <style name="WhiteText18">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_18</item>
+    </style>
+
+    <style name="WhiteText17">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_17</item>
+    </style>
+
+    <style name="WhiteText16">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_16</item>
+    </style>
+
+    <style name="WhiteText15">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_15</item>
+    </style>
+
+    <style name="WhiteText14">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_14</item>
+    </style>
+
+    <style name="WhiteText13">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_13</item>
+    </style>
+
+    <style name="WhiteText12">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_12</item>
+    </style>
+
+    <style name="BlackText36">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_36</item>
+    </style>
+
+    <style name="BlackText20">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_20</item>
+    </style>
+
+    <style name="BlackText19">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_19</item>
+    </style>
+
+    <style name="BlackText18">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_18</item>
+    </style>
+
+    <style name="BlackText17">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_17</item>
+    </style>
+
+    <style name="BlackText16">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_16</item>
+    </style>
+
+    <style name="BlackText15">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_15</item>
+    </style>
+
+    <style name="BlackText14">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_14</item>
+    </style>
+
+    <style name="BlackText13">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_13</item>
+    </style>
+
+
+    <style name="yellow_fc9322_20">
+        <item name="android:textColor">@color/yellow_fc9322</item>
+        <item name="android:textSize">@dimen/font_20</item>
+    </style>
+
+    <style name="yellow_fc9322_19">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_19</item>
+    </style>
+
+    <style name="yellow_fc9322_18">
+        <item name="android:textColor">@color/yellow_fc9322</item>
+        <item name="android:textSize">@dimen/font_18</item>
+    </style>
+
+    <style name="yellow_fc9322_17">
+        <item name="android:textColor">@color/yellow_fc9322</item>
+        <item name="android:textSize">@dimen/font_17</item>
+    </style>
+
+    <style name="yellow_fc9322_16">
+        <item name="android:textColor">@color/yellow_fc9322</item>
+        <item name="android:textSize">@dimen/font_16</item>
+    </style>
+
+    <style name="yellow_fc9322_15">
+        <item name="android:textColor">@color/yellow_fc9322</item>
+        <item name="android:textSize">@dimen/font_15</item>
+    </style>
+
+    <style name="yellow_fc9322_14">
+        <item name="android:textColor">@color/yellow_fc9322</item>
+        <item name="android:textSize">@dimen/font_14</item>
+    </style>
+
+    <style name="yellow_fc9322_13">
+        <item name="android:textColor">@color/yellow_fc9322</item>
+        <item name="android:textSize">@dimen/font_13</item>
+    </style>
+
+    <style name="yellow_fff08c_20">
+        <item name="android:textColor">@color/yellow_fff08c</item>
+        <item name="android:textSize">@dimen/font_20</item>
+    </style>
+
+    <style name="yellow_fff08c_19">
+        <item name="android:textColor">@color/yellow_fff08c</item>
+        <item name="android:textSize">@dimen/font_19</item>
+    </style>
+
+    <style name="yellow_fff08c_18">
+        <item name="android:textColor">@color/yellow_fff08c</item>
+        <item name="android:textSize">@dimen/font_18</item>
+    </style>
+
+    <style name="yellow_fff08c_17">
+        <item name="android:textColor">@color/yellow_fff08c</item>
+        <item name="android:textSize">@dimen/font_17</item>
+    </style>
+
+    <style name="yellow_fff08c_16">
+        <item name="android:textColor">@color/yellow_fff08c</item>
+        <item name="android:textSize">@dimen/font_16</item>
+    </style>
+
+    <style name="yellow_fff08c_15">
+        <item name="android:textColor">@color/yellow_fff08c</item>
+        <item name="android:textSize">@dimen/font_15</item>
+    </style>
+
+    <style name="yellow_fff08c_14">
+        <item name="android:textColor">@color/yellow_fff08c</item>
+        <item name="android:textSize">@dimen/font_14</item>
+    </style>
+
+    <style name="yellow_fff08c_13">
+        <item name="android:textColor">@color/yellow_fff08c</item>
+        <item name="android:textSize">@dimen/font_13</item>
+    </style>
+
+    <style name="yellow_ebcb54_20">
+        <item name="android:textColor">@color/yellow_ebcb54</item>
+        <item name="android:textSize">@dimen/font_20</item>
+    </style>
+
+    <style name="yellow_ebcb54_19">
+        <item name="android:textColor">@color/yellow_ebcb54</item>
+        <item name="android:textSize">@dimen/font_19</item>
+    </style>
+
+    <style name="yellow_ebcb54_18">
+        <item name="android:textColor">@color/yellow_ebcb54</item>
+        <item name="android:textSize">@dimen/font_18</item>
+    </style>
+
+    <style name="yellow_ebcb54_17">
+        <item name="android:textColor">@color/yellow_ebcb54</item>
+        <item name="android:textSize">@dimen/font_17</item>
+    </style>
+
+    <style name="yellow_ebcb54_16">
+        <item name="android:textColor">@color/yellow_ebcb54</item>
+        <item name="android:textSize">@dimen/font_16</item>
+    </style>
+
+    <style name="yellow_ebcb54_15">
+        <item name="android:textColor">@color/yellow_ebcb54</item>
+        <item name="android:textSize">@dimen/font_15</item>
+    </style>
+
+    <style name="yellow_ebcb54_14">
+        <item name="android:textColor">@color/yellow_ebcb54</item>
+        <item name="android:textSize">@dimen/font_14</item>
+    </style>
+
+    <style name="yellow_ebcb54_13">
+        <item name="android:textColor">@color/yellow_ebcb54</item>
+        <item name="android:textSize">@dimen/font_13</item>
+    </style>
+
+    <style name="Black333333Text18">
+        <item name="android:textColor">@color/black333333</item>
+        <item name="android:textSize">@dimen/font_18</item>
+    </style>
+
+    <style name="Black333333Text16">
+        <item name="android:textColor">@color/black333333</item>
+        <item name="android:textSize">@dimen/font_16</item>
+    </style>
+
+    <style name="Black333333Text15">
+        <item name="android:textColor">@color/black333333</item>
+        <item name="android:textSize">@dimen/font_15</item>
+    </style>
+
+    <style name="Black333333Text14">
+        <item name="android:textColor">@color/black333333</item>
+        <item name="android:textSize">@dimen/font_14</item>
+    </style>
+
+    <style name="Black444444Text18">
+        <item name="android:textColor">@color/black444444</item>
+        <item name="android:textSize">@dimen/font_18</item>
+    </style>
+
+    <style name="Black444444Text16">
+        <item name="android:textColor">@color/black444444</item>
+        <item name="android:textSize">@dimen/font_16</item>
+    </style>
+
+    <style name="Black444444Text15">
+        <item name="android:textColor">@color/black444444</item>
+        <item name="android:textSize">@dimen/font_15</item>
+    </style>
+
+    <style name="Black444444Text14">
+        <item name="android:textColor">@color/black444444</item>
+        <item name="android:textSize">@dimen/font_14</item>
+    </style>
+
+    <style name="blueLightText36">
+        <item name="android:textColor">@color/blueLight</item>
+        <item name="android:textSize">@dimen/font_36</item>
+    </style>
+
+    <style name="blueLightText20">
+        <item name="android:textColor">@color/blueLight</item>
+        <item name="android:textSize">@dimen/font_20</item>
+    </style>
+
+    <style name="blueLightText19">
+        <item name="android:textColor">@color/blueLight</item>
+        <item name="android:textSize">@dimen/font_19</item>
+    </style>
+
+    <style name="blueLightText18">
+        <item name="android:textColor">@color/blueLight</item>
+        <item name="android:textSize">@dimen/font_18</item>
+    </style>
+
+    <style name="blueLightText17">
+        <item name="android:textColor">@color/blueLight</item>
+        <item name="android:textSize">@dimen/font_17</item>
+    </style>
+
+    <style name="blueLightText16">
+        <item name="android:textColor">@color/blueLight</item>
+        <item name="android:textSize">@dimen/font_16</item>
+    </style>
+
+    <style name="blueLightText15">
+        <item name="android:textColor">@color/blueLight</item>
+        <item name="android:textSize">@dimen/font_15</item>
+    </style>
+
+    <style name="blueLightText14">
+        <item name="android:textColor">@color/blueLight</item>
+        <item name="android:textSize">@dimen/font_14</item>
+    </style>
+
+    <style name="blueLightText13">
+        <item name="android:textColor">@color/blueLight</item>
+        <item name="android:textSize">@dimen/font_13</item>
+    </style>
+
+    <style name="blueLightText12">
+        <item name="android:textColor">@color/blueLight</item>
+        <item name="android:textSize">@dimen/font_12</item>
+    </style>
+
+    <style name="BlueDarkText18">
+        <item name="android:textColor">@color/blueDark</item>
+        <item name="android:textSize">@dimen/font_18</item>
+    </style>
+
+    <style name="BlueDarkText17">
+        <item name="android:textColor">@color/blueDark</item>
+        <item name="android:textSize">@dimen/font_16</item>
+    </style>
+
+    <style name="BlueDarkText16">
+        <item name="android:textColor">@color/blueDark</item>
+        <item name="android:textSize">@dimen/font_16</item>
+    </style>
+
+    <style name="BlueDarkText15">
+        <item name="android:textColor">@color/blueDark</item>
+        <item name="android:textSize">@dimen/font_15</item>
+    </style>
+
+    <style name="BlueDarkText14">
+        <item name="android:textColor">@color/blueDark</item>
+        <item name="android:textSize">@dimen/font_14</item>
+    </style>
+
+    <style name="BlueDarkText13">
+        <item name="android:textColor">@color/blueDark</item>
+        <item name="android:textSize">@dimen/font_13</item>
+    </style>
+
+    <style name="GrayDarkText17">
+        <item name="android:textColor">@color/grayDarkText</item>
+        <item name="android:textSize">@dimen/font_17</item>
+    </style>
+
+    <style name="GrayDarkText16">
+        <item name="android:textColor">@color/grayDarkText</item>
+        <item name="android:textSize">@dimen/font_16</item>
+    </style>
+
+    <style name="GrayDarkText15">
+        <item name="android:textColor">@color/grayDarkText</item>
+        <item name="android:textSize">@dimen/font_15</item>
+    </style>
+
+    <style name="GrayDarkText14">
+        <item name="android:textColor">@color/grayDarkText</item>
+        <item name="android:textSize">@dimen/font_14</item>
+    </style>
+
+    <style name="GrayDarkText13">
+        <item name="android:textColor">@color/grayDarkText</item>
+        <item name="android:textSize">@dimen/font_13</item>
+    </style>
+
+    <style name="GrayDarkText12">
+        <item name="android:textColor">@color/grayDarkText</item>
+        <item name="android:textSize">@dimen/font_12</item>
+    </style>
+
+    <style name="GrayDarkText11">
+        <item name="android:textColor">@color/grayDarkText</item>
+        <item name="android:textSize">@dimen/font_11</item>
+    </style>
+
+    <style name="GrayDarkText10">
+        <item name="android:textColor">@color/grayDarkText</item>
+        <item name="android:textSize">@dimen/font_10</item>
+    </style>
+
+    <style name="GrayLightText20">
+        <item name="android:textColor">@color/grayLightText</item>
+        <item name="android:textSize">@dimen/font_20</item>
+    </style>
+
+    <style name="GrayLightText19">
+        <item name="android:textColor">@color/grayLightText</item>
+        <item name="android:textSize">@dimen/font_19</item>
+    </style>
+
+    <style name="GrayLightText18">
+        <item name="android:textColor">@color/grayLightText</item>
+        <item name="android:textSize">@dimen/font_18</item>
+    </style>
+
+    <style name="GrayLightText17">
+        <item name="android:textColor">@color/grayLightText</item>
+        <item name="android:textSize">@dimen/font_17</item>
+    </style>
+
+    <style name="GrayLightText16">
+        <item name="android:textColor">@color/grayLightText</item>
+        <item name="android:textSize">@dimen/font_16</item>
+    </style>
+
+    <style name="GrayLightText15">
+        <item name="android:textColor">@color/grayLightText</item>
+        <item name="android:textSize">@dimen/font_15</item>
+    </style>
+
+    <style name="GrayLightText14">
+        <item name="android:textColor">@color/grayLightText</item>
+        <item name="android:textSize">@dimen/font_14</item>
+    </style>
+
+    <style name="GrayLightText13">
+        <item name="android:textColor">@color/grayLightText</item>
+        <item name="android:textSize">@dimen/font_13</item>
+    </style>
+
+    <style name="GrayLightText12">
+        <item name="android:textColor">@color/grayLightText</item>
+        <item name="android:textSize">@dimen/font_12</item>
+    </style>
+
+    <style name="RedText18">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">@dimen/font_18</item>
+    </style>
+
+    <style name="RedText17">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">@dimen/font_17</item>
+    </style>
+
+    <style name="RedText16">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">@dimen/font_16</item>
+    </style>
+
+    <style name="RedText15">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">@dimen/font_15</item>
+    </style>
+
+    <style name="RedText14">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">@dimen/font_14</item>
+    </style>
+
+    <style name="RedText13">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">@dimen/font_13</item>
+    </style>
+
+    <style name="RedText12">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">@dimen/font_12</item>
+    </style>
+
+    <style name="CustomAlertDialogStyle">
+        <item name="android:bottomBright">@color/transparent</item>
+        <item name="android:bottomDark">@color/transparent</item>
+        <item name="android:bottomMedium">@color/transparent</item>
+        <item name="android:centerBright">@color/transparent</item>
+        <item name="android:centerDark">@color/transparent</item>
+        <item name="android:centerMedium">@color/transparent</item>
+        <item name="android:fullBright">@color/transparent</item>
+        <item name="android:fullDark">@color/transparent</item>
+        <item name="android:topBright">@color/transparent</item>
+        <item name="android:topDark">@color/transparent</item>
+    </style>
+
+    <style name="my_progress_dialog_theme" parent="Theme.AppCompat.Dialog">
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:textColorPrimary">@color/text_black_middle</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:textColor">@color/text_black_middle</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+</resources>

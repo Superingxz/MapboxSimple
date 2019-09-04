@@ -1,0 +1,390 @@
+ //这里可以继承IBaseRefreshDispaly
+    interface Display extends IBaseDisplay {
+    }
+
+    interface Presenter extends IBasePresenter<Display> {
+
+    }
+
+    if (is_debug) {
+
+            }else{
+
+            }
+
+     public static void start(Context context) {
+            Intent starter = new Intent(context, UsernameActivity.class);
+            context.startActivity(starter);
+        }
+
+   public static void start(Context context, LockBean lockBean) {
+           Intent starter = new Intent(context, LockOpenReqActivity.class);
+           if (lockBean != null) {
+               starter.putExtra("lockBean", lockBean);
+           }
+           context.startActivity(starter);
+       }
+
+       public static void start(Context context, LockBean lockBean, FamilyBean familyBean) {
+           Intent starter = new Intent(context, LockOpenReqActivity.class);
+           if (lockBean != null) {
+               starter.putExtra("lockBean", lockBean);
+               starter.putExtra("FamilyBean", familyBean);
+           }
+           context.startActivity(starter);
+       }
+
+       public static void start(Fragment fragment, LockBean lockBean) {
+           Intent starter = new Intent(fragment.getActivity(), LockOpenReqActivity.class);
+           if (lockBean != null) {
+               starter.putExtra("lockBean", lockBean);
+           }
+           fragment.startActivity(starter);
+       }
+
+       public static void start(Fragment fragment, LockBean lockBean, FamilyBean familyBean) {
+           Intent starter = new Intent(fragment.getActivity(), LockOpenReqActivity.class);
+           if (lockBean != null) {
+               starter.putExtra("lockBean", lockBean);
+               starter.putExtra("FamilyBean", familyBean);
+           }
+           fragment.startActivity(starter);
+       }
+
+        <android.support.v7.widget.AppCompatTextView
+               android:id="@+id/login_phone"
+               style="@style/button_radius_bluedark"
+               android:layout_below="@id/resetPwd"
+               android:text="@string/app_login"/>
+
+
+        @Nullable
+          @Override
+          protected BaseToolbar.Builder setToolbar(@NonNull BaseToolbar.Builder builder) {
+               builder.setTitle("注册")
+                              .setTitleTextColor(getResources().getColor(R.color.white))
+                              .setBackButton(R.mipmap.back)
+                              .setStatusBarColor(getResources().getColor(R.color.blue12))
+                              .setBackgroundColor(getResources().getColor(R.color.blue12));
+                      return builder;
+          }
+
+ <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/ok"
+        style="@style/button_radius_bluedark"
+        android:layout_below="@id/resetPwd"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        android:text="@string/ok"/>
+
+  <de.hdodenhof.circleimageview.CircleImageView
+         android:id="@+id/avatar"
+         android:layout_width="@dimen/d_55"
+         android:layout_height="@dimen/d_55"
+         android:layout_margin="@dimen/d_5"
+         app:civ_border_color="@android:color/white"
+         android:src="@color/blueLight"
+         app:civ_border_overlay="true" />
+
+  <android.support.v7.widget.CardView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_margin="@dimen/app_padding"
+         app:cardCornerRadius="@dimen/d_10">
+         <android.support.constraint.ConstraintLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+             <android.support.v7.widget.AppCompatImageView
+                 android:layout_width="match_parent"
+                 android:layout_height="180dp"
+                 app:layout_constraintLeft_toLeftOf="parent"
+                 app:layout_constraintRight_toRightOf="parent"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintDimensionRatio="349:180"
+                 android:src="@color/blueLight"/>
+         </android.support.constraint.ConstraintLayout>
+     </android.support.v7.widget.CardView>
+
+android:focusable="true"
+                android:focusableInTouchMode="true"
+
+
+android:drawableRight="@mipmap/equipment_edit"
+
+
+ <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/ok"
+        style="@style/button_yellow_white_radius_5dp"
+        android:layout_marginLeft="@dimen/d_45"
+        android:layout_marginRight="@dimen/d_45"
+        android:layout_marginTop="@dimen/d_20"
+        android:text="@string/ok" />
+
+<android.support.v7.widget.AppCompatTextView
+        android:id="@+id/next_tv"
+        style="@style/button_blue_white_radius_5dp_mw"
+        android:layout_marginLeft="@dimen/d_30"
+        android:layout_marginRight="@dimen/d_30"
+        android:text="@string/base_finish"/>
+
+ new PromptDialog(this)
+                                    .setTitle("")
+                                    .setPositiveButton("确定",R.color.white,R.color.blueLight)
+                                    .setNegativeButton("取消",R.color.blackText,R.color.grayLightText)
+                                    .setOnButtonClickListener((dialog, isPositiveClick) -> {
+                                        if (isPositiveClick) {
+
+                                        }
+                                    }).show();
+
+                new PromptDialog(mContext)
+                        .setTitle("")
+                        .setPositiveButton(getString(R.string.ok),R.color.white,R.color.blueLight)
+                        .setNegativeButton(getString(R.string.cancel),R.color.blackText,R.color.grayLightText)
+                        .setOnButtonClickListener((dialog, isPositiveClick) -> {
+                            if (isPositiveClick) {
+
+                            }
+                        }).show();
+
+BitmapUtil.bitmaptoBase64(bitmapByPath, 50);
+
+        binding.mRecyclerView.addItemDecoration(new ColorDividerDecoration(mContext, R.color.grayLine, DisplayUtil.dip2px(mContext, 1)));
+
+
+ /**
+      * 手动显示软键盘
+      */
+     public void showSoftInput() {
+         InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+         imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
+     }
+
+     /**
+      * 手动显示软键盘
+      */
+     public void hideSoftInput() {
+         InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+         if (imm != null) {
+             imm.hideSoftInputFromWindow(getActivity().getWindow().getDecorView().getWindowToken(), 0);
+         }
+     }
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>
+
+
+   <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#F5F5F5" />
+
+<android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/dp_10"
+        android:src="@drawable/select_pressed"
+        android:visibility="gone"/>
+
+ private String getLocalMediaBase64(List<LocalMedia> localMediaList) {
+        String localMediaPathBase64 = "";
+        if (EmptyUtil.isNotEmpty(localMediaList)) {
+            for (int i = 0; i < localMediaList.size(); i++) {
+                LocalMedia localMedia = localMediaList.get(i);
+                if (new File(localMedia.getPath()).exists()) {
+                    Bitmap bitmapByPath = BitmapUtil.getBitmapByPath(localMedia.getPath());
+                    if (bitmapByPath != null) {
+                        localMediaPathBase64 = BitmapUtil.bitmaptoBase64(bitmapByPath, 50);
+                    }
+                }
+            }
+        } else {
+            localMediaPathBase64 = "";
+        }
+        return localMediaPathBase64;
+    }
+
+
+  <android.support.v7.widget.AppCompatTextView
+         style="@style/button_blue_white_radius_5dp_mw"
+         android:layout_margin="@dimen/d_30"
+         android:text="完成"/>
+
+ @Subscriber(tag = EventBusTag.)
+    public void setPosition(int event) {
+    }
+
+  EventBus.getDefault().post(0, EventBusTag.);
+
+
+
+  <RadioGroup
+              android:id="@+id/rg"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="2"
+              android:orientation="horizontal"
+              android:paddingTop="@dimen/d_5"
+              android:paddingBottom="@dimen/d_5">
+
+              <android.support.v7.widget.AppCompatRadioButton
+                  android:id="@+id/rb_1"
+                  style="@style/Black333333Text15"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:paddingLeft="@dimen/d_10"
+                  android:button="@drawable/radiobutton_blue"
+                  android:gravity="center_vertical"
+                  android:text="男" />
+
+              <android.support.v7.widget.AppCompatRadioButton
+                  android:id="@+id/rb_2"
+                  style="@style/Black333333Text15"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:paddingLeft="@dimen/d_10"
+                  android:button="@drawable/radiobutton_blue"
+                  android:gravity="center_vertical"
+                  android:text="女" />
+          </RadioGroup>
+
+
+  /**
+     * 拨打电话（跳转到拨号界面，用户手动点击拨打）
+     *
+     * @param phoneNum 电话号码
+     */
+    public void diallPhone(String phoneNum) {
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        Uri data = Uri.parse("tel:" + phoneNum);
+        intent.setData(data);
+        startActivity(intent);
+    }
+
+
+ <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:id="@+id/ratingbar_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/d_30"
+                        android:layout_gravity="center_horizontal"
+                        app:mrb_fillBackgroundStars="true"
+                        android:rating="5"
+                        app:mrb_progressTint="@color/tint"
+                        app:mrb_secondaryProgressTint="@color/tint"
+                        style="@style/Widget.MaterialRatingBar.RatingBar" />
+
+  /**
+      * 手动显示软键盘
+      */
+     public void showSoftInput() {
+         InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+         imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
+     }
+
+     /**
+      * 手动显示软键盘
+      */
+     public void hideSoftInput() {
+         InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+         if (imm != null) {
+             imm.hideSoftInputFromWindow(getActivity().getWindow().getDecorView().getWindowToken(), 0);
+         }
+     }
+
+ @Override
+    public void onRefresh() {
+        mPage = 1;
+        loadData();
+    }
+
+    @Override
+    public void onLoadMoreRequested() {
+        mPage++;
+        loadData();
+    }
+
+    private void loadData() {
+        finishRefresh();
+    }
+
+
+
+ @Override
+    protected void prepare() {
+        super.prepare();
+        initData();
+    }
+
+    @Override
+    protected void initialize() {
+        super.initialize();
+        initView();
+        loadData();
+    }
+
+    private void initData() {
+
+    }
+
+    private void initView() {
+
+    }
+
+    private void loadData() {
+
+    }
+
+
+ @Override
+    protected void initEventAndData() {
+        initData();
+        initView();
+        loadData();
+    }
+
+    private void initData() {
+
+    }
+
+    private void initView() {
+
+    }
+
+    private void loadData() {
+
+    }
+
+    @Override
+    protected void lazyLoad() {
+
+    }
+
+     "sprite": "http://localhost:8080/mapbox/sprite/sprite",
+        "glyphs": "http://localhost:8080/mapbox/font/{fontstack}/{range}.pbf",

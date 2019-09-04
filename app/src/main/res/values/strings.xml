@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MapboxSimple</string>
+
+    <string name="network_connection_failed">网络连接失败</string>
+    <string name="network_request_failed">请求失败</string>
+    <string name="network_connection_timeout">网络超时</string>
+    <string name="json_failed">数据解析错误</string>
+    <string name="wxlj">无效链接</string>
+
+    <string name="location_city">定位城市</string>
+    <string name="home">主页</string>
+    <string name="test">测试</string>
+    <string name="user_location_permission_explanation">user location permission explanation</string>
+    <string name="user_location_permission_not_granted">user location permission not granted</string>
+</resources>

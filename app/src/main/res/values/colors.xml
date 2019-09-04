@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#3ca5ee</color>
+    <color name="colorAccent">#3ca5ee</color>
+
+    <color name="tint">#ffc016</color>
+    <color name="yellow_ff3833">#ff3833</color>
+
+
+
+    <color name="blue1">#3a91f4</color>
+    <color name="blue2">#5568d2</color>
+    <color name="blue3" >#7c8ad9</color>
+    <color name="blue4" >#2777d2</color>
+    <color name="blue5">#c5d6fd</color>
+
+    <color name="blue6">#5d88f1</color>
+    <color name="blue7">#346efe</color>
+    <color name="blue8">#2f62e1</color>
+    <color name="blue9">#b2d8fd</color>
+    <color name="blue10">#87bfff</color>
+    <color name="blue11">#d8e9fd</color>
+    <color name="blue12">#262c42</color>
+    <color name="blue13">#eff7ff</color>
+    <color name="blue14">#c8e8ff</color>
+
+    <color name="blueLight">#24A4F3</color>
+    <color name="blueDark">#5568d2</color>
+    <color name="yellow_ffc016">#ffc016</color>
+    <color name="yellow_ebcb54">#ebcb54</color>
+    <color name="yellow_9b6f01">#9b6f01</color>
+    <color name="yellow_fef7e5">#fef7e5</color>
+
+    <color name="partTranslucent">#39000000</color>
+
+    <color name="white">#FFF</color>
+    <color name="whiteLight">#F7F8FA</color>
+    <color name="whiteGray">#FFFAFB</color>
+    <color name="black333333">#333333</color>
+    <color name="black444444">#444444</color>
+    <color name="grayDark">#666666</color>
+    <color name="grayLight">#999999</color>
+    <color name="gray">#CCCCCC</color>
+    <!--<color name="orange">#FE7A2A</color>-->
+    <color name="green">#0FD400</color>
+    <color name="blue">#0066FF</color>
+    <color name="yellow_7c720">#f7c720</color>
+
+    <color name="gray_000000">#33515151</color>
+
+    //功能性
+    <color name="color_line">@color/gray4</color><!--统一分割线-->
+    <color name="color_toolbar_line">@color/gray2</color><!--toolbar下面的分割线-->
+    <color name="color_title">@color/black</color><!--主标题-->
+    <color name="color_title2">@color/black2</color><!--副标题-->
+    <color name="color_text">@color/black3</color><!--正文-->
+    <color name="color_text2">@color/black4</color><!--正文2级-->
+    <color name="color_text3">@color/black5</color><!--正文3级-->
+    <color name="color_label">@color/black5</color><!--标签-->
+    <color name="color_labe2">@color/gray</color><!--标签2级-->
+
+    <color name="black">#000000</color>
+    <color name="black1">#313131</color>
+    <color name="black2">#4c4c4c</color>
+    <color name="black3">#6a6a6a</color>
+    <color name="black4">#929292</color>
+    <color name="black5">#999999</color>
+    <color name="black6">#7F7F7F</color>
+    <color name="black7">#333333</color>
+    <color name="gray2">#cccccc</color>
+    <color name="gray3">#e4e4e4</color>
+    <color name="gray4">#eeeeee</color>
+    <color name="gray5">#F4F4F4</color>
+    <color name="gray6">#CBCBCB</color>
+    <color name="gray7">#f8f8f8</color>
+    <color name="gray8">#d4d4d4</color>
+    <color name="gray9">#e9e9e9</color>
+    <color name="gray10">#f3f3f5</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="yellow_fc9322">#fc9322</color>
+    <color name="yellow_fff08c">#fff08c</color>
+    <color name="yellow_ffc852">#FFC852</color>
+    <color name="blueLightText">@color/blueLight</color>
+    <color name="blueDarkText">@color/blueDark</color>
+    <color name="blueText">@color/blue</color>
+    <color name="blackText">@color/black</color>
+    <color name="grayDarkText">@color/grayDark</color>
+    <color name="grayLightText">@color/grayLight</color>
+    <color name="grayLightText_f6f6f6">@color/gray_f6f6f6</color>
+    <color name="grayLine">#ebebeb</color>
+    <color name="gray_f6f6f6">#f6f6f6</color>
+    <color name="grayf9f9f9">#f9f9f9</color>
+    <color name="grayf5f5f5">#f5f5f5</color>
+    <color name="gray_ebebeb">#ebebeb</color>
+    <color name="grayeeeeee">#eeeeee</color>
+    <color name="gray_d9d9d9">#d9d9d9</color>
+    <color name="gray_f2f2f2">#f2f2f2</color>
+    <color name="gray_767978">#767978</color>
+    <color name="gray_gb9b9b">#9b9b9b</color>
+    <color name="gray_b0b0b0">#ffb0b0b0</color>
+    <color name="gray_edeef2">#ffedeef2</color>
+    <color name="gray_default">#ffedeef2</color>
+
+
+    <color name="black_tran">#33000000</color>
+
+    <color name="text_black_middle">#666666</color>
+
+    <!--scan-->
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+
+    <!--七牛云短视频-->
+    <color name="colorTextBG">#cc222222</color>
+    <color name="colorSpeedPanel">#99222222</color>
+
+    <color name="red">#FF0000</color>
+    <color name="red_fc3a67">#fc3a67</color>
+    <color name="red_fcbaba">#fcbaba</color>
+    <color name="red_f75549">#f75549</color>
+    <color name="red_833125">#833125</color>
+
+    <color name="text1">#FFFFFF</color>
+    <color name="text2">#ffefa8</color>
+    <color name="text3">#fccaff</color>
+    <color name="text4">#61dcff</color>
+    <color name="text5">#ffc502</color>
+    <color name="text6">#ff8621</color>
+    <color name="text7">#ff696a</color>
+    <color name="text8">#7777ff</color>
+    <color name="text9">#ff8621</color>
+    <color name="text10">#00ff00</color>
+    <color name="text11">#ff0000</color>
+    <color name="text12">#0000ff</color>
+
+    <color name="paint1">#FFFFFF</color>
+    <color name="paint2">#000000</color>
+    <color name="paint3">#ffefa8</color>
+    <color name="paint4">#fccaff</color>
+    <color name="paint5">#61dcff</color>
+    <color name="paint6">#ffc502</color>
+    <color name="paint7">#ff8621</color>
+    <color name="paint8">#7777ff</color>
+    <color name="paint9">#00ff00</color>
+    <color name="paint10">#0000ff</color>
+
+    <color name="effectBar1">#ffefa8</color>
+    <color name="effectBar2">#fccaff</color>
+    <color name="effectBar3">#61dcff</color>
+    <color name="effectBar4">#ffc502</color>
+    <color name="effectBar5">#ff8621</color>
+    <color name="effectBar6">#7777ff</color>
+
+    <color name="speedTextNormal">#ffdddddd</color>
+    <color name="textSelectorBG">#2d2b39</color>
+
+    <color name="transitionSelectorBG">#575558</color>
+    <color name="sectionDrawColor">#80575558</color>
+    <color name="frameSelectorBorder">#ffffff</color>
+    <color name="frameSelectorBody">#8061dcff</color>
+    <color name="videoFrameActivityMiddleBG">#222222</color>
+    <color name="videoFrameActivityBottomBG">#1a1a1a</color>
+    <color name="half_transparent_black">#44000000</color>
+
+    <!-- color -->
+    <color name="lsq_color_white">#ffffff</color>
+    <color name="lsq_color_black">#000000</color>
+    <color name="lsq_color_red">#ff0000</color>
+    <color name="lsq_color_gray">#707070</color>
+    <color name="lsq_color_orange">#ff6633</color>
+    <color name="lsq_color_transparent">#00000000</color>
+    <color name="lsq_color_semitransparent">#7f000000</color>
+
+    <!-- seekbar -->
+    <color name="lsq_seekbar_drag_color">#f4a11a</color>
+    <color name="lsq_seekbar_view_color">#d9d9d9</color>
+    <color name="lsq_dubbing_unselected_color">#9B9B9B</color>
+    <color name="lsq_dubbing_bg_color">#EFEFEF</color>
+    <color name="lsq_dubbing_record_selected_color">#c17111</color>
+    <color name="lsq_clip_title_color">#3e3e39</color>
+    <color name="lsq_filter_title_color">#f4a11a</color>
+    <color name="lsq_filter_title_default_color">#9fa0a0</color>
+
+    <!-- alpha -->
+    <color name="lsq_alpha_black_66">#66000000</color>
+    <color name="lsq_alpha_black_B4">#B4000000</color>
+    <color name="lsq_alpha_black_CO">#C0000000</color>
+
+    <color name="pwk_keyboard_divider">#CCC</color>
+    <color name="pwk_keyboard_background">#E9E9E9</color>
+
+    <color name="pwk_text_color">@android:color/black</color>
+    <color name="pwk_border_gray">#d8d8d8</color>
+
+    <color name="pwk_key_pressed_bubble_text">@color/pwk_primary_color</color>
+
+    <color name="pwk_key_pressed_gray">#CECECE</color>
+
+    <!--兼容属性-->
+    <color name="pwk_keyboard_primary_color">#418AF9</color>
+    <color name="pwk_keyboard_primary_dark_color">#3A7CE0</color>
+
+    <!--定义键盘组件的颜色-->
+    <color name="pwk_primary_color">@color/pwk_keyboard_primary_color</color>
+    <color name="pwk_primary_dark_color">@color/pwk_keyboard_primary_dark_color</color>
+
+    <color name="healthy_function_color1">#fff4f2</color>
+    <color name="healthy_function_color2">#f3feea</color>
+    <color name="healthy_function_color3">#fef7e5</color>
+    <color name="healthy_function_color4">#eff7ff</color>
+
+    <color name="rsbColorSeekBarDefault">#c3c3c3</color>
+    <color name="rsbColorThumbPressed">#FFE7E7E7</color>
+    <color name="rsbColorThumbDefault">#FFFFFF</color>
+    <color name="rsbColorThumbBorder">#FFD7D7D7</color>
+</resources>

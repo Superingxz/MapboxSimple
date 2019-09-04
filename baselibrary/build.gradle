@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+
+def config = rootProject.ext.ver
+def library = rootProject.ext.library
+
+android {
+    compileSdkVersion config.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    publishNonDefault true //默认不为发布版本
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    api library.supportV4
+    api library.supportV7
+    api library.design
+    api library.cardview
+    api library.constraint
+    api library.recyclerview
+    api library.circleimageview
+
+    api library.rxjava2
+    api library.rxlifecycle2_components
+    api library.BaseRecyclerViewAdapterHelper
+    api library.SmartRefreshLayout
+    api library.rxpermissions2
+    api library.logger
+    api library.BaseToolbar
+    api library.StatusBarUtil
+    api library.glide
+
+    api library.butterknife
+    //annotationProcessor library.butterknife_compiler
+    api 'com.noober.background:core:1.3.7'
+
+}

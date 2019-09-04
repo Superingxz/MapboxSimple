@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_map_simple"
+        style="@style/Black333333Text15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/d_10"
+        android:text="Mapbox Simple"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_map_location_component"
+        style="@style/Black333333Text15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/d_10"
+        android:text="Mapbox Location Component"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_map_marker"
+        style="@style/Black333333Text15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/d_10"
+        android:text="Mapbox Marker"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_map_polyline"
+        style="@style/Black333333Text15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/d_10"
+        android:text="Mapbox Polyline"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_test_mapbox_download_file"
+        style="@style/WhiteText15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blueLight"
+        android:padding="@dimen/d_10"
+        android:gravity="center"
+        android:text="download_file"/>
+</LinearLayout>

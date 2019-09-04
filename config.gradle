@@ -1,0 +1,154 @@
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+ext {
+
+    ver = [
+            //Version
+            versionCode                  : 96,
+            versionName                  : "2.0.6",
+
+            //SDK And Tools
+            minSdkVersion                : 18,
+            targetSdkVersion             : 28,
+            compileSdkVersion            : 28,
+
+            //Dependencies
+            supportLibraryVersion        : '28.0.0',
+            multidex                     : '1.0.2',
+            junit                        : '4.12',
+            mockito                      : '2.23.4',
+            hamcrest                     : '2.0.0.0',
+            commonsIO                    : '2.6',
+            robolectric                  : '4.1',
+
+            //libraryVersion
+            log                          : '2.2.0',//无混淆
+            rxjava2                      : '2.1.12',
+            rxandroid                    : '2.0.2',
+            rxlifecycle2                 : '2.2.1',
+            SmartRefreshLayout           : '1.0.5.1',//无需混淆
+            BaseRecyclerViewAdapterHelper: '2.9.34',
+            butterknife                  : '8.8.1',
+            retrofit2                    : '2.4.0',
+            okio                         : '1.14.0',
+            okhttp                       : '3.10.0',
+            gson                         : '2.8.2',
+            glide                        : '4.6.1',
+            timber                       : '4.7.1',
+
+            autoValue                    : '1.5.4',
+            autoValueParcel              : '0.2.5',
+            mapboxMapPrefix              : 'v8',
+            mapboxMapSdk                 : '8.1.0',
+            mapboxSdkServices            : '4.8.0',
+            mapboxEvents                 : '4.4.1',
+            mapboxCore                   : '1.2.0',
+            mapboxNavigator              : '6.2.1',
+            mapboxCrashMonitor           : '2.0.0',
+            mapboxAnnotationPlugin       : '0.7.0',
+            mapboxPluginBuilding         : '0.6.0',
+            mapboxPluginPlaces           : '0.9.0',
+            mapboxPluginLocalization     : '0.10.0',
+            mapboxPluginTraffic          : '0.9.0',
+            mapboxChinaPlugin            : '2.2.0',
+            mapboxPluginMarkerView       : '0.3.0',
+            mapboxPluginScalebar         : '0.1.0',
+            mapboxSearchSdk              : '0.1.0-SNAPSHOT',
+    ]
+
+    library = [
+            multidex                     : "com.android.support:multidex:$ver.multidex",
+            design                       : "com.android.support:design:$ver.supportLibraryVersion",
+            cardview                     : "com.android.support:cardview-v7:$ver.supportLibraryVersion",
+            supportV4                    : "com.android.support:support-v4:$ver.supportLibraryVersion",
+            supportV7                    : "com.android.support:appcompat-v7:$ver.supportLibraryVersion",
+            recyclerview                 : "com.android.support:recyclerview-v7:$ver.supportLibraryVersion",
+            constraint                   : 'com.android.support.constraint:constraint-layout:1.0.2',
+            junit                        : "junit:junit:${ver.junit}",
+            mockito                      : "org.mockito:mockito-core:${ver.mockito}",
+            hamcrest                     : "org.hamcrest:hamcrest-junit:${ver.hamcrest}",
+            commonsIO                    : "commons-io:commons-io:${ver.commonsIO}",
+            robolectric                  : "org.robolectric:robolectric:${ver.robolectric}",
+
+            timber                       : "com.jakewharton.timber:timber:${ver.timber}",
+            logger                       : "com.orhanobut:logger:$ver.log",
+            rxjava2                      : "io.reactivex.rxjava2:rxjava:$ver.rxjava2",
+            rxandroid                    : "io.reactivex.rxjava2:rxandroid:$ver.rxandroid",
+            rxpermissions2               : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar",
+            rxlifecycle2_components      : "com.trello.rxlifecycle2:rxlifecycle-components:$ver.rxlifecycle2",
+            SmartRefreshLayout           : "com.scwang.smartrefresh:SmartRefreshLayout:$ver.SmartRefreshLayout",
+            BaseRecyclerViewAdapterHelper: "com.github.CymChad:BaseRecyclerViewAdapterHelper:$ver.BaseRecyclerViewAdapterHelper",
+
+            butterknife                  : "com.jakewharton:butterknife:$ver.butterknife",
+            butterknife_compiler         : "com.jakewharton:butterknife-compiler:$ver.butterknife",
+
+            banner                       : 'com.youth.banner:banner:1.4.9',
+
+            okio                         : "com.squareup.okio:okio:$ver.okio",
+            okhttp                       : "com.squareup.okhttp3:okhttp:$ver.okhttp",
+            okhttp_logging               : "com.squareup.okhttp3:logging-interceptor:$ver.okhttp",
+            retrofit2                    : "com.squareup.retrofit2:retrofit:$ver.retrofit2",
+            retrofit2_gson               : "com.squareup.retrofit2:converter-gson:$ver.retrofit2",
+            retrofit2_adapter            : "com.squareup.retrofit2:adapter-rxjava2:$ver.retrofit2",
+            gson                         : "com.google.code.gson:gson:$ver.gson",
+            glide                        : "com.github.bumptech.glide:glide:$ver.glide",
+            glide_compiler               : "com.github.bumptech.glide:compiler:$ver.glide",
+            indexablestickylistview      : "me.yokeyword:indexablestickylistview:0.6.10",
+            androideventbus              : "org.simple:androideventbus:1.0.5.1",
+            ezviz                        : "com.hikvision.ezviz:ezviz-sdk:4.7.1",
+            jpush                        : "cn.jiguang.sdk:jpush:3.0.9",
+            jcore                        : "cn.jiguang.sdk:jcore:1.1.7",
+            circleimageview              : 'de.hdodenhof:circleimageview:2.2.0',
+            TabLayout                    : 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar',
+            FlycoRoundView               : 'com.flyco.roundview:FlycoRoundView_Lib:1.1.4@aar',
+            greendao                     : 'org.greenrobot:greendao:3.2.2',
+
+            //高德地图
+            amap                         : 'com.amap.api:location:latest.integration',
+            amap_3dmap                   : 'com.amap.api:3dmap:latest.integration',
+            amap_map2d                   : 'com.amap.api:map2d:latest.integration',
+            amap_navi_3dmap              : 'com.amap.api:navi-3dmap:latest.integration',
+            amap_search                  : 'com.amap.api:search:6.1.0',
+            amap_location                : 'com.amap.api:location:latest.integration',
+
+            ShortcutBadger               : 'me.leolin:ShortcutBadger:1.1.19@aar',
+            PickerView                   : 'com.contrarywind:Android-PickerView:4.1.6',
+            BaseToolbar                  : 'com.mirkowu:BaseToolbar:0.0.8',
+            StatusBarUtil                : 'com.mirkowu:StatusBarUtil:0.0.6',
+            barlibrary                   : 'com.gyf.barlibrary:barlibrary:2.3.0',
+            parse_android                : 'com.parse:parse-android:1.13.1',
+            swipelayout                  : 'com.daimajia.swipelayout:library:1.2.0@aar',
+
+            // AutoValue
+            autoValue                    : "com.google.auto.value:auto-value:${ver.autoValue}",
+            autoValuesParcel             : "com.ryanharter.auto.value:auto-value-parcel:${ver.autoValueParcel}",
+            mapboxMapSdk                 : "com.mapbox.mapboxsdk:mapbox-android-sdk:${ver.mapboxMapSdk}",
+            mapboxSdkServices            : "com.mapbox.mapboxsdk:mapbox-sdk-services:${ver.mapboxSdkServices}",
+            mapboxSdkTurf                : "com.mapbox.mapboxsdk:mapbox-sdk-turf:${ver.mapboxSdkServices}",
+            mapboxEvents                 : "com.mapbox.mapboxsdk:mapbox-android-telemetry:${ver.mapboxEvents}",
+            mapboxCore                   : "com.mapbox.mapboxsdk:mapbox-android-core:${ver.mapboxCore}",
+            mapboxNavigator              : "com.mapbox.navigator:mapbox-navigation-native:${ver.mapboxNavigator}",
+            mapboxAnnotationPlugin       : "com.mapbox.mapboxsdk:mapbox-android-plugin-annotation-v8:${ver.mapboxAnnotationPlugin}",
+            mapboxPluginBuilding         : "com.mapbox.mapboxsdk:mapbox-android-plugin-building-${ver.mapboxMapPrefix}:${ver.mapboxPluginBuilding}",
+            mapboxPluginPlaces           : "com.mapbox.mapboxsdk:mapbox-android-plugin-places-${ver.mapboxMapPrefix}:${ver.mapboxPluginPlaces}",
+            mapboxPluginLocalization     : "com.mapbox.mapboxsdk:mapbox-android-plugin-localization-${ver.mapboxMapPrefix}:${ver.mapboxPluginLocalization}",
+            mapboxPluginTraffic          : "com.mapbox.mapboxsdk:mapbox-android-plugin-traffic-${ver.mapboxMapPrefix}:${ver.mapboxPluginTraffic}",
+            mapboxChinaPlugin            : "com.mapbox.mapboxsdk:mapbox-android-plugin-china:${ver.mapboxChinaPlugin}",
+            mapboxPluginMarkerView       : "com.mapbox.mapboxsdk:mapbox-android-plugin-markerview-${ver.mapboxMapPrefix}:${ver.mapboxPluginMarkerView}",
+            mapboxPluginAnnotation       : "com.mapbox.mapboxsdk:mapbox-android-plugin-annotation-${ver.mapboxMapPrefix}:${ver.mapboxPluginAnnotation}",
+            mapboxPluginScalebar         : "com.mapbox.mapboxsdk:mapbox-android-plugin-scalebar-${ver.mapboxMapPrefix}:${ver.mapboxPluginScalebar}",
+            mapboxSearchSdk              : "com.mapbox.mapboxsdk:mapbox-search-android:${ver.mapboxSearchSdk}",
+            mapboxCrashMonitor           : "com.mapbox.crashmonitor:mapbox-crash-monitor-native:${ver.mapboxCrashMonitor}"
+    ]
+
+    //keystore
+    keystorePath = rootDir.toString() + '\\camp.jks'
+//    keystorePassword = properties.getProperty("keystorePassword")
+//    alias = properties.getProperty("alias")
+//    aliasPassword = properties.getProperty("aliasPassword")
+
+    keystorePassword = 'ruanjie'
+    alias = 'ruanjie'
+    aliasPassword = 'ruanjie'
+}
